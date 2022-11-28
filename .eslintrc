@@ -1,0 +1,18 @@
+{
+  "env": {
+    "es2022": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": ["eslint:recommended", "eslint-config-prettier", "standard"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "space-before-function-paren": "off",
+    "no-multiple-empty-lines": "off",
+    "no-tabs": "off",
+    "indent": ["warn", "tab"],
+    "quotes": ["warn", "single"],
+    "jsx-quotes": ["warn", "prefer-single"],
+    "eol-last": "off"
+  }
+}
