@@ -1,0 +1,19 @@
+.btn {
+	@apply w-7 h-7 cursor-pointer relative mr-2 text-sm p-0 border-none outline-none bg-opacity-0;
+	background-color: transparent;
+}
+
+.btn::before {
+	@apply content-[attr(data-title)] hidden absolute right-0 -top-3/4 rounded bg-violet-900 bg-opacity-80 text-violet-50 text-xs leading-3 font-semibold px-2 py-1 whitespace-pre break-keep;
+}
+.btn svg{
+	cursor: pointer;
+}
+.btn:hover{
+	cursor: pointer;
+}
+
+.btn:hover::before{
+	display: inline-block;
+	cursor: pointer;
+}

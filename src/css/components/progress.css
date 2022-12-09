@@ -1,0 +1,37 @@
+progress {
+  appearance: none;
+}
+::-webkit-progress-bar {
+  background-color: theme('colors.violet.100');
+	border-radius: 4px;
+	opacity: .78;
+}
+
+::-moz-progress-bar {
+  background: theme('colors.violet.400');
+	opacity: .6;
+	border-radius: 4px;
+}
+
+::-webkit-progress-value {
+  background-color: theme('colors.violet.400');
+	opacity: .6;
+	border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	@apply appearance-none h-4 w-4 rounded-full bg-violet-800 relative;
+}
+
+.progress-tooltip {
+	@apply absolute -top-8 -ml-5 text-xs leading-3 text-violet-50 font-bold py-1 px-3 rounded bg-violet-900 bg-opacity-80 content-[attr(data-title)];
+	display: none;
+}
+
+#progress-input:hover + .progress-tooltip {
+	display: block;
+}
+
+#volume::-webkit-slider-thumb {
+	@apply appearance-none border-0 h-4 w-4 rounded-full bg-violet-800 mt-0; 
+}

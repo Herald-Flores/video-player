@@ -1,0 +1,5 @@
+.playback-animation{
+	background-color: theme('colors.violet.50');
+  padding: theme('spacing.2') theme('spacing.4');
+	@apply absolute rounded-full pointer-events-none top-1/2 left-1/2 -ml-10 -mt-10 w-20 h-20 bg-violet-900 bg-opacity-50 flex place-items-center opacity-0;
+}
