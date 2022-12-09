@@ -6,7 +6,7 @@ import { updateProgress } from './src/js/progress-bar.js'
 import { updateTimeElapsed } from './src/js/time-elapsed.js'
 import { updateVolumeIcon } from './src/js/volume.js'
 import * as videoPlay from './src/js/play-pause.js'
-
+import { handleKeyboardShortcuts } from './src/js/keyboard-shortcuts.js'
 
 // Define the event listeners as an object
 const eventListeners = {
@@ -30,3 +30,5 @@ for (const eventType in eventListeners) {
 	}
 }
 
+// Attach a keyboard shortcut listener to the document
+document.addEventListener('keyup', handleKeyboardShortcuts)
