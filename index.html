@@ -91,6 +91,22 @@
 							</div>
 		
 							<div class="right-controls flex justify-between items-center">
+								<div class="spead">
+									<button id="speedButton" class="mb-3 md:mb-0 text-violet-50 font-medium rounded-lg text-md px-4 py-2.5 text-center inline-flex items-center" type="button">1X <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+									<!-- Dropdown menu -->
+									<div id="dropdown-speed" class="hidden px-3 absolute bottom-12 z-10 max-w-max bg-violet-900 rounded divide-y divide-gray-100 shadow">
+										<ul id="options-speed" class="py-1 text-sm text-violet-50 flex flex-col justify-center">
+											<button role="button" class="hover:text-violet-400 py-2 cursor-pointer w-max" data-speed="0.25">.25x</button>
+											<button role="button" class="hover:text-violet-400 py-2 cursor-pointer w-max" data-speed="0.5">.5x</button>
+											<button role="button" class="hover:text-violet-400 py-2 cursor-pointer w-max" data-speed="0.75">.75x</button>
+											<button role="button" class="hover:text-violet-400 py-2 cursor-pointer w-max" data-speed="1.0">Normal</button>
+											<button role="button" class="hover:text-violet-400 py-2 cursor-pointer w-max" data-speed="1.25">1.25x</button>
+											<button role="button" class="hover:text-violet-400 py-2 cursor-pointer w-max" data-speed="1.5">1.5x</button>
+											<button role="button" class="hover:text-violet-400 py-2 cursor-pointer w-max" data-speed="2.0">2x</button>
+										</ul>
+									</div>
+								</div>
+
 								<button class="btn" data-title="PIP (p)" class="pip-button" id="pip-button">
 									<svg class="w-full h-full fill-violet-50 hover:via-violet-200">
 										<use href="#pip"></use>

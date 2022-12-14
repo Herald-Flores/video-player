@@ -30,7 +30,6 @@ export const initializeVideo = () => {
 	duration.setAttribute('datetime', `${time.minutes}m ${time.seconds}s`)
 }
 
-
 // Add functions here
 updatePlayButton(video)
 
