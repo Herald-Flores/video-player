@@ -4,6 +4,7 @@ import { formatTime } from './format-time.js'
 // Select elements here
 export const video = document.getElementById('video')
 export const playButton = document.getElementById('play')
+const captionBtn = document.querySelector('#caption-button')
 
 export const togglePlay = () => {
 	video[video.paused ? 'play' : 'pause']()
@@ -40,3 +41,14 @@ if (videoWorks) {
 }
 
 playButton.addEventListener('click', togglePlay)
+
+const toggleCaption = () => {
+	const track = video.textTracks[0]
+	if (track.mode === 'showing') {
+		track.mode = 'hidden'
+	} else {
+		track.mode = 'showing'
+	}
+}
+
+captionBtn.addEventListener('click', toggleCaption)
