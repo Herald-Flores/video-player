@@ -7,7 +7,12 @@ import { updateTimeElapsed } from './src/js/time-elapsed.js'
 import { updateVolumeIcon } from './src/js/volume.js'
 import * as videoPlay from './src/js/play-pause.js'
 import { handleKeyboardShortcuts } from './src/js/keyboard-shortcuts.js'
-import { setVideoSpeed } from './src/js/speed'
+import { setVideoSpeed } from './src/js/speed.js'
+import * as playList from './src/js/playlist.js'
+
+// Get the buttons
+const prevButton = document.getElementById('prev')
+const nextButton = document.getElementById('next')
 
 // Define the event listeners as an object
 const eventListeners = {
@@ -52,3 +57,8 @@ speedOptions.addEventListener('click', (event) => {
 		setVideoSpeed(value)
 	}
 })
+
+playList.updateVideo()
+// Event listeners
+prevButton.addEventListener('click', playList.previousVideo)
+nextButton.addEventListener('click', playList.nextVideo)

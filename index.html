@@ -130,53 +130,77 @@
 						</div>
 					</div>
 				</div>
-				<h2 class="text-2xl font-bold text-violet-900 mt-3">Titulo</h2>
-				
-				<div class="flex items-center space-x-4 pt-3">
-					<img class="w-10 h-10 rounded-full border-2 border-violet-400" src="https://avatars.githubusercontent.com/u/26610741?s=96&v=4" alt="Herald Flores">
-					<div class="font-medium dark:text-white">
-							<div>Herald Flores</div>
+				<div class="flex w-full justify-between items-center pt-4">
+					<div class="description">
+						<h2 class="text-2xl font-bold text-violet-900 mt-3">Titulo</h2>
+					</div>
+
+					<div id="controls" class="flex items-center gap-4">
+						<button id="prev" class="w-max gap-2 flex items-center text-violet-900 hover:bg-violet-200 p-2 rounded-sm">
+							<svg class="w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+								<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+							</svg>
+							Anterior
+						</button>
+						<button id="next" class="w-max gap-2 flex items-center text-violet-900 hover:bg-violet-200 p-2 rounded-sm">
+							Siguiente
+							<svg class="w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+								<path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+							</svg>
+						</button>
 					</div>
 				</div>
+				
+				<div class="flex items-center justify-between pt-3">
+					<div class="video-info space-x-4 flex items-center">
+						<img class="w-10 h-10 rounded-full border-2 border-violet-400" src="https://avatars.githubusercontent.com/u/26610741?s=96&v=4" alt="Herald Flores">
+						<div class="font-medium dark:text-white">
+							<div>Herald Flores</div>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 			
 			
 			<aside class="list col-span-6 mt-5 lg:mt-0 max-h-max lg:col-span-2 bg-gradient-to-r from-violet-300 via-violet-400 to-violet-600 rounded-xl shadow-lg shadow-violet-200 p-1">
-				<div class="bg-violet-900 rounded-lg w-full h-full grid gap-y-3 grid-1 p-3">
+				<div class="bg-violet-900 rounded-lg w-full h-full px-2">
 					<div class="tag pt-3">
 						<span class="bg-violet-100 text-violet-900 text-md font-semibold leading-none px-3 py-1 rounded max-w-max">Todos</span>
 					</div>
-					<div class="bg-violet-50 rounded-lg gap-2 flex flex-col hover:bg-violet-100 h-max mt-2">
-						<a href="#" class="flex flex-col items-center md:flex-row md:max-w-xl rounded-lg border-2 border-violet-400">
-							<img class="object-cover w-full rounded-t-lg h-36 md:h-32 md:w-36 md:rounded-none md:rounded-l-lg" src="./src/img/poster-video-01.jpg" alt="">
-							<div class="flex flex-col justify-between p-4 leading-normal">
-								<h3 class="mb-1 text-lg leading-none font-bold tracking-tight text-violet-800">Noteworthy technology acquisitions 2021</h3>
-								<p class="mb-0 text-violet-900 font-semibold">Source</p>
-								<p class="text-sm text-violet-900 opacity-70 leading-none">Hace 1 dia</p>
+					<div class="play-list flex flex-col gap-y-2 pt-4" id="playlist">
+						<div class="bg-violet-50 rounded-lg gap-2 flex flex-col hover:bg-violet-100 h-max mt-2">
+							<div data-url="/src/videos/sample-02.mp4" class="video-in-list flex flex-col items-center md:flex-row md:max-w-xl rounded-lg border-2 border-violet-400">
+								<img class="object-cover w-full rounded-t-lg h-36 md:h-32 md:w-36 md:rounded-none md:rounded-l-lg" src="./src/img/poster-video-01.jpg" alt="">
+								<div class="flex flex-col justify-between p-4 leading-normal">
+									<h3 class="mb-1 text-lg leading-none font-bold tracking-tight text-violet-800">Noteworthy technology acquisitions 2021</h3>
+									<p class="mb-0 text-violet-900 font-semibold">Source</p>
+									<p class="text-sm text-violet-900 opacity-70 leading-none">Hace 1 dia</p>
+								</div>
 							</div>
-						</a>
-					</div>
-
-					<div class="bg-violet-50 rounded-lg gap-2 flex flex-col hover:bg-violet-100 h-max">
-						<a href="#" class="flex flex-col items-center md:flex-row md:max-w-xl rounded-lg border-2 border-violet-400">
-							<img class="object-cover w-full rounded-t-lg h-36 md:h-32 md:w-36 md:rounded-none md:rounded-l-lg" src="./src/img/poster-video-01.jpg" alt="">
-							<div class="flex flex-col justify-between p-4 leading-normal">
-								<h3 class="mb-1 text-lg leading-none font-bold tracking-tight text-violet-800">Noteworthy technology acquisitions 2021</h3>
-								<p class="mb-0 text-violet-900 font-semibold">Source</p>
-								<p class="text-sm text-violet-900 opacity-70 leading-none">Hace 1 dia</p>
+						</div>
+	
+						<div class="bg-violet-50 rounded-lg gap-2 flex flex-col hover:bg-violet-100 h-max">
+							<div data-url="/src/videos/sample-01.mp4" class="video-in-list flex flex-col items-center md:flex-row md:max-w-xl rounded-lg border-2 border-violet-400">
+								<img class="object-cover w-full rounded-t-lg h-36 md:h-32 md:w-36 md:rounded-none md:rounded-l-lg" src="./src/img/poster-video-01.jpg" alt="">
+								<div class="flex flex-col justify-between p-4 leading-normal">
+									<h3 class="mb-1 text-lg leading-none font-bold tracking-tight text-violet-800">Noteworthy technology acquisitions 2021</h3>
+									<p class="mb-0 text-violet-900 font-semibold">Source</p>
+									<p class="text-sm text-violet-900 opacity-70 leading-none">Hace 1 dia</p>
+								</div>
 							</div>
-						</a>
-					</div>
-
-					<div class="bg-violet-50 rounded-lg gap-2 flex flex-col hover:bg-violet-100 h-max">
-						<a href="#" class="flex flex-col items-center md:flex-row md:max-w-xl rounded-lg border-2 border-violet-400">
-							<img class="object-cover w-full rounded-t-lg h-36 md:h-32 md:w-36 md:rounded-none md:rounded-l-lg" src="./src/img/poster-video-01.jpg" alt="">
-							<div class="flex flex-col justify-between p-4 leading-normal">
-								<h3 class="mb-1 text-lg leading-none font-bold tracking-tight text-violet-800">Noteworthy technology acquisitions 2021</h3>
-								<p class="mb-0 text-violet-900 font-semibold">Source</p>
-								<p class="text-sm text-violet-900 opacity-70 leading-none">Hace 1 dia</p>
+						</div>
+	
+						<div class="bg-violet-50 rounded-lg gap-2 flex flex-col hover:bg-violet-100 h-max">
+							<div data-url="/src/videos/sample-01.mp4" class="video-in-list flex flex-col items-center md:flex-row md:max-w-xl rounded-lg border-2 border-violet-400">
+								<img class="object-cover w-full rounded-t-lg h-36 md:h-32 md:w-36 md:rounded-none md:rounded-l-lg" src="./src/img/poster-video-01.jpg" alt="">
+								<div class="flex flex-col justify-between p-4 leading-normal">
+									<h3 class="mb-1 text-lg leading-none font-bold tracking-tight text-violet-800">Noteworthy technology acquisitions 2021</h3>
+									<p class="mb-0 text-violet-900 font-semibold">Source</p>
+									<p class="text-sm text-violet-900 opacity-70 leading-none">Hace 1 dia</p>
+								</div>
 							</div>
-						</a>
+						</div>
 					</div>
 				</div>
 			</aside>
