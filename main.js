@@ -43,7 +43,6 @@ if (speedBtn) {
 }
 
 const speedOptions = document.querySelector('#options-speed')
-
 speedOptions.addEventListener('click', (event) => {
 	if (event.target.tagName === 'BUTTON') {
 		const text = event.target.innerText

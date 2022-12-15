@@ -3,6 +3,7 @@ const progressBar = document.querySelector('#progress-bar')
 const progressInput = document.querySelector('#progress-input')
 const video = document.getElementById('video')
 const seekTooltip = document.querySelector('#progress-tooltip')
+const canvas = document.querySelector('#snapshot-canvas')
 
 export const updateProgress = () => {
 	progressInput.value = Math.floor(video.currentTime)
@@ -30,3 +31,17 @@ export const skipAhead = (event) => {
 progressInput.addEventListener('mousemove', updateProgressTooltip)
 progressInput.addEventListener('input', skipAhead)
 
+const snapshotGenerator = () => {
+	canvas.width = 1280
+	canvas.height = 720
+	const context = canvas.getContext('2d')
+
+	context.drawImage(video, 0, 0, canvas.width, canvas.height)
+	canvas.style.display = 'block'
+}
+
+progressInput.addEventListener('mousemove', snapshotGenerator)
+
+progressInput.addEventListener('mouseout', () => {
+	canvas.style.display = 'none'
+})
